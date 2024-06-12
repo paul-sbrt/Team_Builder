@@ -1,1 +1,3 @@
 # Team_Builder
+
+The Team Builder project was a course project in Symfony to understand the basics of the framework and to mix forms, many-to-many relationships, and controller routes as everything is on the same page.
