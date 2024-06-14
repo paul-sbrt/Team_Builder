@@ -94,6 +94,15 @@ class PersonneController extends AbstractController
 
         return $this->redirectToRoute('app_main');
     }
+
+    #[Route('/delete/personne/equipe/{team}/{personne}', name: 'personne_team_delete')]
+    public function effacerPersonneEquipe(Team $team,Personne $personne,EntityManagerInterface $em): Response
+    {
+        $team->removePersonne($personne);
+        $em->flush();
+        return $this->redirectToRoute('app_main');
+
+    }
 }
 
 
